@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form>
+    <input type='number' id='' placeholder='digite um texto' step='0.01' required>
+    <textarea></textarea>
+  </form>
+
+  <form action="/cadastrar_estoque" method='post'>
+    <fieldset>
+      <legend>
+        Cadastro de Produtos
+      </legend>
+
+      <input type='text' id='typeProduct' name='nomeProduto' placeholder='digite um texto' required>
+
+      <select title="product" id='produtos' name="produtos">
+        <option value='camisa'>Camisa</option>
+        <option value='shorts'>Shorts</option>
+        <option value='chinelo nike' selected>Chinelo nike</option>
+        <option value='boné'>Boné just do it</option>
+
+        <input type='date' name='data_atualização'>
+
+        <input type="reset" value="Limpar">
+        <input type="submit" value="Cadastrar">
+      </select>
+
+    </fieldset>
+  </form>
+</body>
+
+</html>

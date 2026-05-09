@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Aromas</title>
+  <style>
+    body{
+      background-color: #ccccc999;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+      h1 {
+        color: #333;
+        font-weight: bold;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 30px;
+
+        text-align: center;
+      }
+      p {
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #555;
+      }
+       form {
+        width: 80%;
+        font-family: Times New Roman, Times, serif;
+        font-weight: 600;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 20px;
+
+      }
+      table {
+      border-collapse: collapse;
+      margin-bottom: 20px;
+     }
+     input {
+      width: 100%;
+      padding: 14px;
+      margin: 4px 0;
+      box-sizing: border-box;
+      border: 1px solid #4e4e4e;
+      border-radius: 6px;
+     }
+     table, th, td {
+      border: 1px solid #ccc;
+     }
+     th, td {
+      padding: 8px;
+      text-align: left;
+     }
+     th {
+      background-color: #eee;
+     }
+     fieldset {
+     max-width: 600px;
+     background-color: #fff;
+     padding: 20px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     position: absolute;
+     }
+     fieldset table {
+      width: 100%;
+      border: none;
+     }
+     fieldset table td {
+      border: none;
+      padding: 8px;
+     }
+
+     input[type="submit"], input[type="reset"] {
+      color: white;
+      padding: 10px 20px;
+
+      width: 30%;
+      transition-property: width;
+      transition-duration: 0.5s;
+
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      margin: 5px;
+     }
+     input[type="submit"] {
+      background-color: #4CAF50;
+     }
+      input[type="reset"] {
+      background-color: #df0026;
+     }
+     input[type="submit"]:hover {
+      background-color: #45a049;
+        width: 40%;
+     }
+    input[type="reset"]:hover {
+      background-color: #c7001b;
+      width: 40%;
+     }
+
+
+      @media (max-width: 600px) {
+        h1, p, form, input, table,
+         th, td, fieldset,
+          input[type="submit"], input[type="reset"],label {
+          font-size: 90%;
+        }
+      }
+  </style>
+</head>
+<body>
+  <h1>Café Aromas</h1>
+  <p>Bem-vindo à nossa loja de café!</p>
+  <form action="/fazer_pedido" method='post'>
+        <fieldset>
+            <legend>
+                Peça seu café de cada dia aqui!
+             </legend>
+
+             <table>
+                <tr>
+                  <td>
+                    <label for="codigo_cafe">Tipo de Café</label>
+                  </td>
+                  <td>
+                    <input type='number' id='codigo_cafe'
+                     name='codigoCafe' placeholder='digite o código do café'
+                      step='1' required>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <label for="adicional_cafe">Adicional do café</label>
+                  </td>
+                  <td>
+                    <input type='text' id='adicional_cafe' name='adicionalCafe' placeholder='digite o adicional do café' required>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <label for="quantidade_cafe">Quantidade</label>
+                  </td>
+                  <td>
+                    <input type='number' id='quantidade_cafe' name='quantidadeCafe' placeholder='Quantidade' step='1' required>
+                  </td>
+                </tr>
+    </fieldset>
+
+    <input type="reset" value="Limpar">
+    <input type="submit" value="Pedir café">
+  </form>
+</body>
+</html>

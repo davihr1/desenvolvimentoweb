@@ -203,6 +203,28 @@
     console.log('b: ' + b);
   }teste();
 
-  console.log( 'variável b fora da função: ' + b);
+  let funcaoAnonima = function() {
+    console.log('Sou uma função anônima');
+  }; funcaoAnonima();
+
+  function funcaoComCallback() {
+    console.log('Sou uma função com callback');
+    setTimeout(function() {
+      console.log('Callback executado após 6 segundos');
+    }, 6000);
+  } funcaoComCallback();
+
+  function FuncaoAnonimaArray() {
+    let array = [1, 2, 3, 4, 5];
+    
+    let funcaoarray = array.map(function(numero) {
+      return numero * 2;
+    });
+    console.log('Array resultante: ' + funcaoarray);
+  } FuncaoAnonimaArray();
+
+  const somar = (x, y) => x + y;
+  console.log('Soma: ' + somar(5, 3));
+  console.log('Soma: ' + somar(10, 20));
 </script>
 </html>

@@ -191,114 +191,30 @@
   </form>
 </body>
 <script>
-  let a = 10;
-  let b = 20;
+  let frutas = ['banana', 'maçã', 'laranja', 'uva'];
+  console.log(frutas[0]); // banana
+  console.log(frutas[3]); // uva
 
-  let adicao = a + b;
-  console.log(adicao);
+  frutas[3] = 'abacaxi';
+  console.log(frutas[3]); // abacaxi
 
-  let subtracao = a - b;
-  console.log(subtracao);
+  console.log(frutas);
+  console.log(frutas.length); // 4
 
-  let multiplicacao = a * b;
-  console.log(multiplicacao)
+  let objetos = ['Geladeira', 'Fogão', 'Microondas'];
+  console.log(objetos);
 
-  let divisao = a / b;
-  console.log(divisao)
+  objetos[3] = 6;
+  console.log(objetos);
 
-  console.log(divisao + "" + adicao);
+  <!-- Metodos de Arrays -->
+  frutas.push('melancia');
+  frutas.push('morango');
 
-  let modulo = a % b;
-  console.log(modulo)
+  frutas.shift(); // remove o primeiro elemento do array');
+  frutas.unshift('kiwi'); // adiciona um elemento no inicio do array');
 
-  let exponencial = a ** b;
-  console.log(exponencial);
-
-  let increment = a;
-  increment++;
-  console.log(increment);
-
-  let decrement = b;
-  decrement--;
-  console.log(decrement);
-
-  /**
-  *Operadores de Atribuição
-  */
-  let x = 5;
-  let y = 10;
-
-  x += 5;
-
-  x *= y;
-
-  x /= y;
-
-  /**
-  *Operadores Aritiméticos
-  */
-
-  function frutasDesejadas(fruta1, fruta2){
-    const frutaDesejada = 'maçã';
-    const frutaDesejada2 = 'banana';
-
-    return fruta1 === frutaDesejada && fruta2 === frutaDesejada2;
-  }
-
-  console.log(frutasDesejadas('maçã', 'banana'));
-  console.log(frutasDesejadas('uva', 'pera'));
-  console.log(frutasDesejadas('uva', 'banana'));
-
-  function frutasDesejadas2(fruta1, fruta2){
-    const frutaDesejada = 'jaboticaba';
-    const frutaDesejada2 = 'mamão';
-
-    return fruta1 === frutaDesejada || fruta2 === frutaDesejada2;
-  }
-
-  console.log(frutasDesejadas2('maçã', 'mamão'));
-
-  <!-- Operadores de Strings -->
-  let string1 = 'Olá';
-  let string2 = 'Mundo';
-
-  function concatenarStrings(str1, str2){
-    return str1.concat(' ', str2);
-  }
-
-  let stringNova = concatenarStrings(string1, string2);
-  console.log(stringNova);
-  console.log(stringNova.toUpperCase());
-  console.log(stringNova.toLowerCase());
-  console.log(stringNova.substring(0, 5));
-  console.log(stringNova.substring(1, 5));
-  console.log(stringNova.replace('Olá', 'Hello'));
-  console.log(stringNova.replace('Mundo', 'World'));
-
-  a = 20;
-  b = 10;
-
-  expressao = (a % b) + (a**b);
-  console.log(expressao);
-
-  saudacao = 'olá';
-  saudacao += ' mundo';
-  saudacao = saudacao.toUpperCase();
-  console.log(saudacao);
-
-  let fruta1 = "maçã";
-
-let fruta2 = "banana";
-
-let resultado = (fruta1 === "maçã" && fruta2 === "pera") || (fruta1 === "maçã" && fruta2 === "banana");
-console.log(resultado);
-
-a += b > 8 && b <= 10 ? 3 : 2;
-console.log(a);
-
-x *= y > 15 ? 2 : 3;
-console.log(x);
-b -= a < 50 ? 5 : 10;
-console.log(b);
+  newArray = frutas.concat(objetos); // concatena os dois arrays');
+  console.log(newArray);
 </script>
 </html>

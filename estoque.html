@@ -191,40 +191,114 @@
   </form>
 </body>
 <script>
-  console.log('Hello world!');
+  let a = 10;
+  let b = 20;
 
-  var produto = 'Monitor';
-  console.log('produto: ' + produto);
+  let adicao = a + b;
+  console.log(adicao);
 
-  var a = 'a';
-  function teste() {
-    let b = 'b';
-    console.log('a: ' + a);
-    console.log('b: ' + b);
-  }teste();
+  let subtracao = a - b;
+  console.log(subtracao);
 
-  let funcaoAnonima = function() {
-    console.log('Sou uma função anônima');
-  }; funcaoAnonima();
+  let multiplicacao = a * b;
+  console.log(multiplicacao)
 
-  function funcaoComCallback() {
-    console.log('Sou uma função com callback');
-    setTimeout(function() {
-      console.log('Callback executado após 6 segundos');
-    }, 6000);
-  } funcaoComCallback();
+  let divisao = a / b;
+  console.log(divisao)
 
-  function FuncaoAnonimaArray() {
-    let array = [1, 2, 3, 4, 5];
-    
-    let funcaoarray = array.map(function(numero) {
-      return numero * 2;
-    });
-    console.log('Array resultante: ' + funcaoarray);
-  } FuncaoAnonimaArray();
+  console.log(divisao + "" + adicao);
 
-  const somar = (x, y) => x + y;
-  console.log('Soma: ' + somar(5, 3));
-  console.log('Soma: ' + somar(10, 20));
+  let modulo = a % b;
+  console.log(modulo)
+
+  let exponencial = a ** b;
+  console.log(exponencial);
+
+  let increment = a;
+  increment++;
+  console.log(increment);
+
+  let decrement = b;
+  decrement--;
+  console.log(decrement);
+
+  /**
+  *Operadores de Atribuição
+  */
+  let x = 5;
+  let y = 10;
+
+  x += 5;
+
+  x *= y;
+
+  x /= y;
+
+  /**
+  *Operadores Aritiméticos
+  */
+
+  function frutasDesejadas(fruta1, fruta2){
+    const frutaDesejada = 'maçã';
+    const frutaDesejada2 = 'banana';
+
+    return fruta1 === frutaDesejada && fruta2 === frutaDesejada2;
+  }
+
+  console.log(frutasDesejadas('maçã', 'banana'));
+  console.log(frutasDesejadas('uva', 'pera'));
+  console.log(frutasDesejadas('uva', 'banana'));
+
+  function frutasDesejadas2(fruta1, fruta2){
+    const frutaDesejada = 'jaboticaba';
+    const frutaDesejada2 = 'mamão';
+
+    return fruta1 === frutaDesejada || fruta2 === frutaDesejada2;
+  }
+
+  console.log(frutasDesejadas2('maçã', 'mamão'));
+
+  <!-- Operadores de Strings -->
+  let string1 = 'Olá';
+  let string2 = 'Mundo';
+
+  function concatenarStrings(str1, str2){
+    return str1.concat(' ', str2);
+  }
+
+  let stringNova = concatenarStrings(string1, string2);
+  console.log(stringNova);
+  console.log(stringNova.toUpperCase());
+  console.log(stringNova.toLowerCase());
+  console.log(stringNova.substring(0, 5));
+  console.log(stringNova.substring(1, 5));
+  console.log(stringNova.replace('Olá', 'Hello'));
+  console.log(stringNova.replace('Mundo', 'World'));
+
+  a = 20;
+  b = 10;
+
+  expressao = (a % b) + (a**b);
+  console.log(expressao);
+
+  saudacao = 'olá';
+  saudacao += ' mundo';
+  saudacao = saudacao.toUpperCase();
+  console.log(saudacao);
+
+  let fruta1 = "maçã";
+
+let fruta2 = "banana";
+
+let resultado = (fruta1 === "maçã" && fruta2 === "pera") || (fruta1 === "maçã" && fruta2 === "banana");
+console.log(resultado);
+
+a += b > 8 && b <= 10 ? 3 : 2;
+console.log(a);
+
+x *= y > 15 ? 2 : 3;
+console.log(x);
+b -= a < 50 ? 5 : 10;
+console.log(b);
 </script>
 </html>
